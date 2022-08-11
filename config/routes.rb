@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'lists/new' => "lists#new"
   get '/lists' => "lists#index"
-  get 'lists/show' => "lists#show"
+  get 'lists/:id' => "lists#show", as: "list"
   get 'lists/edit' => "lists#edit"
   get '/top' => "homes#top"
   post "lists" => "lists#create"
